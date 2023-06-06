@@ -23,7 +23,7 @@ def open_in_brave(url):
 def open_in_xed(text):
     with open('/tmp/qr_code.txt', 'w') as f:
         f.write(text)
-    subprocess.run([xed_path, '/tmp/qr_code.txt'])
+    subprocess.run(["nohup", xed_path, '/tmp/qr_code.txt'])
 
 # Initialize the webcam
 cap = cv2.VideoCapture(0)
