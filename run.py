@@ -16,6 +16,8 @@ def is_url(s):
         return False
 
 def open_in_brave(url):
+    #subprocess.run(["touch", "/home/pimania/test.txt11"])
+    #subprocess.run(["touch", "/home/pimania/" + str(time.time())])
     subprocess.run([brave_path, url])
 
 def open_in_xed(text):
@@ -25,8 +27,8 @@ def open_in_xed(text):
 
 # Initialize the webcam
 cap = cv2.VideoCapture(0)
-cap.set(3, 640)  # Width
-cap.set(4, 480)  # Height
+cap.set(3, 1920)  # Width
+cap.set(4, 1080)  # Height
 
 # List to store visited codes
 visited_codes = []
